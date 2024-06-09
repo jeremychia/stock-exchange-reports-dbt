@@ -9,4 +9,5 @@ with
         from {{ ref("dim_prep_sg_sgx__companies") }}
     )
 
-select * from source
+select *
+from source
