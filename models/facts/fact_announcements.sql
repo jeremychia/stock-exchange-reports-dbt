@@ -35,7 +35,9 @@ with
             headers.announcement_url,
 
             -- categories
-            coalesce(headers.announcement_category, details.announcement_category) as announcement_category,
+            coalesce(
+                headers.announcement_category, details.announcement_category
+            ) as announcement_category,
 
             -- dates
             headers.announcement_date,
@@ -51,8 +53,7 @@ with
             details.announcement_description
 
         from headers
-        left join details
-            on headers.announcement_id = details.announcement_id
+        left join details on headers.announcement_id = details.announcement_id
     )
 
 select *

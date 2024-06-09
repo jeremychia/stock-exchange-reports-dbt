@@ -1,5 +1,5 @@
 with
-    source as (select * from {{ source('sg_sgx', 'announcements') }}),
+    source as (select * from {{ source("sg_sgx", "announcements") }}),
     renamed as (
         select
             trim({{ adapter.quote("id") }}) as announcement_id,

@@ -1,5 +1,5 @@
 with
-    source as (select * from {{ source('sg_sgx', 'announcement_attachments') }}),
+    source as (select * from {{ source("sg_sgx", "announcement_attachments") }}),
     renamed as (
         select
             {{ adapter.quote("announcement_reference") }},
