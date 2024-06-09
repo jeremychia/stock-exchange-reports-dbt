@@ -1,0 +1,6 @@
+sources:
+  - name: sg_sgx
+    tables:
+      - name: announcements
+      - name: announcement_details
+      - name: announcement_attachments
