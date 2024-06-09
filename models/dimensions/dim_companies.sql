@@ -1,6 +1,7 @@
 with
     source as (
         select
+            stock_market,
             company_name,
             financial_period_end_mm_dd,
             has_multiple_financial_period_end,
