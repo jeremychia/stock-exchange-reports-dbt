@@ -3,7 +3,7 @@ with
     renamed as (
         select
             {{ adapter.quote("announcement_reference") }},
-            {{ adapter.quote("url") }} as announcement_url
+            {{ adapter.quote("url") }} as announcement_url,
             {{ adapter.quote("attachment_name") }},
             {{ adapter.quote("attachment_link") }},
 
