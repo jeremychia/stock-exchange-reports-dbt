@@ -45,6 +45,9 @@ models:
     facts:
       +materialized: table
       +schema: fact
+    dimensional_prep:
+      +materialized: view
+      +schema: dim_prep
     staging:
       +materialized: view
       +schema: stg
