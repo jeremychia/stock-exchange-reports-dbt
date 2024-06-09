@@ -22,6 +22,7 @@ with
             datetime(
                 {{ adapter.quote("broadcast_at") }}, "Asia/Singapore"
             ) as broadcast_at_local_time,
+            'Asia/Singapore' as local_time_zone,
             {{ adapter.quote("status") }} as announcement_status,
             {{ adapter.quote("report_type") }} as announcement_category,
             {{ adapter.quote("announcement_title") }} as announcement_category_details,
