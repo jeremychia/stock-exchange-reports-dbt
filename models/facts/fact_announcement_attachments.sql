@@ -10,6 +10,7 @@ with attachments as (
 
 details as (
     select
+        announcement_id,
         announcement_reference,
         announcement_url,
         announcement_category
@@ -18,6 +19,7 @@ details as (
 
 joined as (
     select
+        details.announcement_id,
         details.announcement_reference,
         details.announcement_url,
         details.announcement_category,
