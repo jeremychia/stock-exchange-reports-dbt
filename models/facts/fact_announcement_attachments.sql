@@ -26,7 +26,17 @@ with
         left join
             attachments
             on details.announcement_reference = attachments.announcement_reference
+    ),
+
+    generate_surrogate_key as (
+        select
+            {{
+                dbt_utils.generate_surrogate_key(
+                    ["announcement_id", "announcement_reference", "attachment_link"]
+                )
+            }} as attachment_gbq_id, joined.*
+        from joined
     )
 
 select *
-from joined
+from generate_surrogate_key
